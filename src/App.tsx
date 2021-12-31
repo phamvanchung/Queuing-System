@@ -1,13 +1,14 @@
-import React from 'react'
-import './App.css'
-import Login from './pages/Auth/LoginPage'
+import React from "react";
+import "./App.css";
+// import Login from "./pages/login";
+import ForgotPass from "./pages/ForgotPass";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Login />
+      <ForgotPass />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
