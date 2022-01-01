@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-// import Login from "./pages/login";
-import ForgotPass from "./pages/ForgotPass";
+import Login from "./pages/Login";
+// import ForgotPass from "./pages/ForgotPass";
+// import ChangePass from "./pages/ChangePass";
 
 const App = () => {
   return (
     <div className="App">
-      <ForgotPass />
+      <Login />
     </div>
   );
 };
