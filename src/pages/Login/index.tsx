@@ -23,6 +23,7 @@ interface Props {}
 const theme = createTheme();
 
 interface State {
+  email: string;
   password: string;
   showPassword: boolean;
 }
@@ -31,14 +32,14 @@ const Login = (props: Props) => {
   const classes = useStyles();
 
   const [values, setValues] = React.useState<State>({
+    email: "",
     password: "",
     showPassword: false,
   });
 
-  const handleChange =
-    (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValues({ ...values, [prop]: event.target.value });
-    };
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
+  };
 
   const handleClickShowPassword = () => {
     setValues({
@@ -46,21 +47,17 @@ const Login = (props: Props) => {
       showPassword: !values.showPassword,
     });
   };
+
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
     event.preventDefault();
   };
 
-  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   // eslint-disable-next-line no-console
-  //   console.log({
-  //     email: data.get('email'),
-  //     password: data.get('password'),
-  //   });
-  // };
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(values);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
@@ -92,7 +89,7 @@ const Login = (props: Props) => {
             <Box
               component="form"
               noValidate
-              // onSubmit={handleSubmit}
+              onSubmit={handleSubmit}
               sx={{ mt: 1 }}
               className={classes.form}
             >
@@ -113,17 +110,19 @@ const Login = (props: Props) => {
                       padding: 10,
                     },
                   }}
+                  onChange={handleChange}
                   className={classes.input}
                 />
               </div>
               <div className={classes.wrapperForm}>
                 <Typography className={classes.title}>Mật khẩu *</Typography>
                 <OutlinedInput
+                  name="password"
                   id="outlined-adornment-password"
                   type={values.showPassword ? "text" : "password"}
                   value={values.password}
                   fullWidth
-                  onChange={handleChange("password")}
+                  onChange={handleChange}
                   endAdornment={
                     <InputAdornment position="end">
                       <IconButton

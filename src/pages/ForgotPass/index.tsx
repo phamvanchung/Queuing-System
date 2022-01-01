@@ -1,4 +1,3 @@
-// import imgBackground from "../../assets/images/Bg1.svg";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -13,7 +12,7 @@ import { useStyles } from "./styles";
 
 interface Props {}
 
-const Login = (props: Props) => {
+const ForgotPass = (props: Props) => {
   const classes = useStyles();
 
   // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -122,4 +121,4 @@ const Login = (props: Props) => {
   );
 };
 
-export default Login;
+export default ForgotPass;
