@@ -1,0 +1,32 @@
+[
+    {
+        "display_name": "Dashboard",
+        "route": "/",
+        "icon": "bx bx-category-alt"
+    },
+    {
+        "display_name": "Thiết bị",
+        "route": "/equipment",
+        "icon": "bx bx-desktop"
+    },
+    {
+        "display_name": "Dịch vụ",
+        "route": "/service",
+        "icon": "bx bx-message-rounded-dots"
+    },
+    {
+        "display_name": "Cấp số",
+        "route": "/level-number",
+        "icon": "bx bx-layer"
+    },
+    {
+        "display_name": "Báo cáo",
+        "route": "/report",
+        "icon": "bx bx-clipboard"
+    },
+    {
+        "display_name": "Cài đặt hệ thống",
+        "route": "/analytics",
+        "icon": "bx bx-cog"
+    }
+]

@@ -1,13 +1,3 @@
-import { createTheme } from '@mui/material/styles';
-
-export const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#ff4400',
-    },
-  },
-});
-
 
 export const COLORS = {
   BG_COLOR: '#b1b1b1',
@@ -16,6 +6,7 @@ export const COLORS = {
   COLOR_BORDER: ' #D4D4D7',
   COLOR_ORANGE: '#E73F3F',
   COLOR_BTN: '#FF9138',
-  COLOR_TITLE: '#FF7506'
+  COLOR_TITLE: '#FF7506',
 
+  COLOR_BTN_WHITE: '#fff2e7'
 }

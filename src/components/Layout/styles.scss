@@ -1,0 +1,11 @@
+@import "../../assets/styles/global.scss";
+
+.wrapper__container {
+  display: flex;
+  .wrapper__sidebar {
+    width: 15%;
+  }
+  .wrapper__children {
+    width: 85%;
+  }
+}

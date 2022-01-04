@@ -1,0 +1,126 @@
+@import "../../assets/styles/global.scss";
+
+.profile__container {
+  height: 100vh;
+  padding: 15px 20px;
+  background-color: $bg_color;
+
+  .profile__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @include tablet-mobile {
+      margin: 0 60px;
+      margin-bottom: 80px;
+    }
+    .profile__title {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+      color: $color_btn_hover;
+    }
+    .profile__user {
+      display: flex;
+      align-items: center;
+      .profile__icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        background-color: $color_bg_bell;
+        i {
+          color: $color_bell;
+        }
+      }
+      .profile__wrap {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        .profile__wrap-user {
+          margin-left: 8px;
+          .profile__hello {
+            font-size: 12px;
+            line-height: 18px;
+            color: $color_text_sidebar;
+          }
+          .profile__name {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_text_input;
+          }
+        }
+      }
+    }
+  }
+  .profile__content {
+    background: $color_white;
+    box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
+    border-radius: 12px;
+    width: 95%;
+    height: 397px;
+    display: flex;
+    @include tablet-mobile {
+      width: 90%;
+      margin: 0 60px;
+    }
+    .profile__content-left {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .profile__icon {
+        width: 45px;
+        height: 45px;
+        border: 2px solid $color_white;
+        background: $color_orange_bland;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          font-size: 25px;
+          color: $color_white;
+        }
+      }
+      .profile__avatar {
+        width: 248px;
+        height: 248px;
+        @include tablet-mobile {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      .profile__content-name {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: $color_text_avatar;
+        margin-top: 10px;
+      }
+    }
+    .profile__content-right {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .profile__content-input-left {
+        width: 50%;
+        margin-left: 20px;
+      }
+      .profile__content-input-right {
+        width: 50%;
+        margin: 0 20px;
+      }
+    }
+  }
+}

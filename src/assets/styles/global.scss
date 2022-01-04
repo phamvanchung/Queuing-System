@@ -1,0 +1,62 @@
+$bg_color: #b1b1b1;
+$color_text: #37474f;
+$color_text_input: #535261;
+$color_border: #d4d4d7;
+$color_orange: #e73f3f;
+$color_orange_bland: #ff7506;
+$color_btn: #fff2e7;
+$color_btn_hover: #ff9138;
+$color_white: #fff;
+$color_text_sidebar: #7e7d88;
+
+$color_bg_bell: #fff2e7;
+$color_bell: #ffac6a;
+$color_text_avatar: #282739;
+
+@mixin mobile-small {
+  @media (min-width: 0) and (max-width: 424px) {
+    @content;
+  }
+}
+
+@mixin mobile-medium {
+  @media (min-width: 425px) and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-large {
+  @media (min-width: 480px) and(max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin tablet-mobile {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin desktop-medium {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

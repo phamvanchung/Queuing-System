@@ -1,0 +1,51 @@
+@import "../../assets//styles//global.scss";
+
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  img {
+    width: 80px;
+    height: 64px;
+  }
+}
+
+.btn {
+  &:hover {
+    background-color: $color_orange_bland;
+  }
+}
+
+.sidebar__item {
+  .sidebar__item-inner {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease 0s;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color_text_sidebar;
+
+    span {
+      text-transform: capitalize;
+      margin-left: 6px;
+    }
+
+    &:hover {
+      color: $color_white;
+      background-color: $color_orange_bland;
+    }
+
+    .active {
+      background-color: $color_orange_bland;
+      color: $color_white;
+    }
+  }
+}
+.sidebar__link {
+  text-decoration: none;
+}
