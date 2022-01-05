@@ -19,7 +19,7 @@
 
 .sidebar__item {
   .sidebar__item-inner {
-    padding: 10px 15px;
+    padding: 10px 25px;
     display: flex;
     align-items: center;
     transition: color 0.3s ease 0s;
@@ -39,11 +39,10 @@
       color: $color_white;
       background-color: $color_orange_bland;
     }
-
-    .active {
-      background-color: $color_orange_bland;
-      color: $color_white;
-    }
+  }
+  .active {
+    background-color: $color_orange_bland;
+    color: $color_white;
   }
 }
 .sidebar__link {

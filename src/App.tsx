@@ -1,18 +1,35 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "./assets/boxicons-2.0.7/css/boxicons.min.css";
-
-// import Login from "./pages/Login";
-// import ForgotPass from "./pages/ForgotPass";
-// import ChangePass from "./pages/ChangePass";
-import Profile from "./pages/ProfilePage";
-import Layout from "./components/Layout";
+import { IRoutes } from "./models";
+import { routes } from "./routes";
 
 const App = () => {
   return (
-    <div className="App">
-      <Profile />
-    </div>
+    <Router>
+      <Switch>
+        {routes.map((route: IRoutes, idx: number) => {
+          const Guard = route.guard || Fragment;
+          const Layout = route.layout || Fragment;
+          const Component = route.component || Fragment;
+          return (
+            <Route
+              key={`route-${idx}`}
+              path={route.path}
+              exact={route.exact}
+              render={(props: any) => (
+                <Guard>
+                  <Layout>
+                    <Component {...props} />
+                  </Layout>
+                </Guard>
+              )}
+            />
+          );
+        })}
+      </Switch>
+    </Router>
   );
 };
 
