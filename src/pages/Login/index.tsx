@@ -1,68 +1,64 @@
-// import imgBackground from "../../assets/images/Bg1.svg";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import {
-  IconButton,
-  InputAdornment,
-  OutlinedInput,
-  Typography,
-} from "@mui/material";
+import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
+import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
+import { IconButton, InputAdornment, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
+import { FormikProvider, useFormik } from "formik";
 import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link as RouterLink, useHistory } from "react-router-dom";
+import * as Yup from "yup";
+import { login } from "../../actions";
 import imgLogo from "../../assets/images/Logo.svg";
 import { COLORS } from "../../assets/styles";
+import { State } from "../../reducers";
 import { useStyles } from "./styles";
 
-interface Props {}
-const theme = createTheme();
-
-interface State {
-  email: string;
-  password: string;
-  showPassword: boolean;
-}
-
-const Login = (props: Props) => {
+const Login = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-  const [values, setValues] = React.useState<State>({
-    email: "",
-    password: "",
-    showPassword: false,
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword((show) => !show);
+  };
+
+  const { isLoggedIn } = useSelector((state: State) => state.auth);
+
+  const LoginSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Email must be a valid email address")
+      .required("Email is required"),
+    password: Yup.string().required("Password is required"),
   });
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+      remember: true,
+    },
+    validationSchema: LoginSchema,
+    onSubmit: () => {
+      dispatch(login(values.email, values.password));
+    },
+  });
 
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
+  const { errors, touched, values, handleSubmit, getFieldProps } = formik;
 
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-  };
+  if (isLoggedIn) {
+    history.push("/");
+  }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(values);
-  };
   return (
-    <ThemeProvider theme={theme}>
+    <FormikProvider value={formik}>
       <Grid container component="main" sx={{ height: "100vh" }}>
-        <CssBaseline />
-
         <Grid
           item
           xs={12}
@@ -101,55 +97,52 @@ const Login = (props: Props) => {
                   required
                   fullWidth
                   id="email"
-                  name="email"
                   autoComplete="email"
                   autoFocus
                   hiddenLabel
                   inputProps={{
                     style: {
-                      padding: 10,
+                      padding: "15 10px",
                     },
                   }}
-                  onChange={handleChange}
                   className={classes.input}
+                  {...getFieldProps("email")}
+                  error={Boolean(touched.email && errors.email)}
+                  helperText={touched.email && errors.email}
                 />
               </div>
               <div className={classes.wrapperForm}>
                 <Typography className={classes.title}>Mật khẩu *</Typography>
-                <OutlinedInput
-                  name="password"
-                  id="outlined-adornment-password"
-                  type={values.showPassword ? "text" : "password"}
-                  value={values.password}
+
+                <TextField
                   fullWidth
-                  onChange={handleChange}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                      >
-                        {values.showPassword ? (
-                          <Visibility />
-                        ) : (
-                          <VisibilityOff />
-                        )}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  inputProps={{
-                    style: {
-                      padding: 10,
-                    },
+                  autoComplete="current-password"
+                  type={showPassword ? "text" : "password"}
+                  hiddenLabel
+                  color="info"
+                  {...getFieldProps("password")}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={handleShowPassword} edge="end">
+                          {showPassword ? (
+                            <VisibilityOutlinedIcon />
+                          ) : (
+                            <VisibilityOffOutlinedIcon />
+                          )}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
                   }}
+                  error={Boolean(touched.password && errors.password)}
+                  helperText={touched.password && errors.password}
                   className={classes.input}
                 />
               </div>
               <Grid item xs>
                 <Link
-                  href="#"
+                  component={RouterLink}
+                  to="/forgot-password"
                   variant="body2"
                   style={{ textDecoration: "none", color: COLORS.COLOR_ORANGE }}
                 >
@@ -182,7 +175,7 @@ const Login = (props: Props) => {
           </div>
         </Grid>
       </Grid>
-    </ThemeProvider>
+    </FormikProvider>
   );
 };
 

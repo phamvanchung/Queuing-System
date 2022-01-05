@@ -1,11 +1,10 @@
 import React, { FC } from "react";
-import { PATH_NAME } from "../constants";
-import { Navigate } from "react-router-dom";
-// import { getDataStorage } from "utils";
+import { PATH_NAME, QUEUING } from "../constants";
+import { Redirect } from "react-router-dom";
 
 const AuthGuard: FC = ({ children }) => {
-  // const isAuth = Boolean(getDataStorage("token"));
-  // if (!isAuth) return <Navigate to={PATH_NAME.LOGIN} />;
+  const isAuth = Boolean(localStorage.getItem(QUEUING));
+  if (!isAuth) return <Redirect to={PATH_NAME.LOGIN} />;
   return <>{children}</>;
 };
 

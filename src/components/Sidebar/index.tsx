@@ -4,38 +4,45 @@ import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import * as React from "react";
+import { Link, useRouteMatch } from "react-router-dom";
 import logo from "../../assets/images/Logo.svg";
 import { COLORS } from "../../assets/styles";
 import sidebar_routes from "../../constants/JsonData/sidebar_routes.json";
 import "./styles.scss";
 
-interface Props {}
+// const drawerWidth = 200;
 
-const drawerWidth = 200;
-
-const Sidebar = (props: Props) => {
-  const SidebarItem = (props: any) => {
-    const active = props.active ? "active" : "";
-    return (
-      <div className="sidebar__item">
-        <div className={`sidebar__item-inner ${active}`}>
-          <i className={props.icon}></i>
-          <span>{props.title}</span>
-        </div>
+const SidebarItem = (props: any) => {
+  const active = props.active ? "active" : "";
+  return (
+    <div className="sidebar__item">
+      <div className={`sidebar__item-inner ${active}`}>
+        <i className={props.icon}></i>
+        <span>{props.title}</span>
       </div>
-    );
+    </div>
+  );
+};
+
+const Sidebar = () => {
+  const match = useRouteMatch();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.reload();
   };
 
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer
         sx={{
-          width: drawerWidth,
+          width: "auto",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: drawerWidth,
+            width: "auto",
             boxSizing: "border-box",
             border: "none",
+            overflowY: "hidden",
           },
         }}
         variant="permanent"
@@ -47,13 +54,13 @@ const Sidebar = (props: Props) => {
 
         <List>
           {sidebar_routes.map((item, index) => (
-            <a href={item.route} key={index} className="sidebar__link">
+            <Link to={item.route} key={index} className="sidebar__link">
               <SidebarItem
                 title={item.display_name}
                 icon={item.icon}
-                // active={item.route === match.url}
+                active={item.route === match.url}
               />
-            </a>
+            </Link>
           ))}
         </List>
 
@@ -76,6 +83,7 @@ const Sidebar = (props: Props) => {
             height: "48px",
           }}
           className="btn"
+          onClick={handleLogout}
         >
           Đăng xuất
         </Button>

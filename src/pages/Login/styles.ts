@@ -22,8 +22,7 @@ export const useStyles = makeStyles({
   input: {
     fontFamily: 'Nunito',
     fontSize: "18px",
-    color: COLORS.COLOR_TEXT_INPUT,
-
+    color: '#535261 !important',
   },
   wrapBtn: {
     display: 'flex',
