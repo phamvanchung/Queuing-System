@@ -1,6 +1,7 @@
 @import "../../assets/styles/global.scss";
 
 .profile__container {
+  margin: 20px;
   @include tablet-mobile {
     margin: 0 60px;
   }

@@ -9,6 +9,7 @@ import * as React from "react";
 import imgLogo from "../../assets/images/Logo.svg";
 import { COLORS } from "../../assets/styles";
 import { useStyles } from "./styles";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -81,7 +82,8 @@ const ForgotPass = (props: Props) => {
 
             <div className={classes.wrapBtn}>
               <Button
-                type="submit"
+                component={Link}
+                to="/login"
                 variant="outlined"
                 sx={{ mt: 3, mb: 2 }}
                 style={{
@@ -98,7 +100,8 @@ const ForgotPass = (props: Props) => {
                 Hủy
               </Button>
               <Button
-                type="submit"
+                component={Link}
+                to="/change-password"
                 variant="contained"
                 sx={{ mt: 3, mb: 2, ml: 2 }}
                 style={{
