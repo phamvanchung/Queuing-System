@@ -1,0 +1,193 @@
+@import "../../assets/styles/global.scss";
+
+.dashboard__container {
+  display: flex;
+  overflow-y: hidden;
+
+  .dashboard__chart {
+    width: 70%;
+    padding: 10px 20px;
+    background-color: $bg_color;
+
+    .dashboard__header {
+      font-family: Nunito;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+      color: $color_btn_hover;
+      margin-bottom: 10px;
+    }
+    .dashboard__title {
+      font-family: Nunito;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_orange_bland;
+      margin-bottom: 10px;
+    }
+    .dashboard__wrap-card {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .dashboard__chart-item {
+      margin-top: 25px;
+      border-radius: 8px;
+      background-color: $color_white;
+      // height: 400px;
+
+      .dashboard__chart-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+
+        .dashboard__chart-item-title {
+          font-family: Nunito;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 30px;
+          color: $color_text_avatar;
+        }
+        .dashboard__chart-item-select {
+          display: flex;
+          align-items: center;
+
+          h6 {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_text_avatar;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .dashboard__summary {
+    width: 30%;
+    background-color: $color_white;
+    padding: 20px 15px;
+    .profile__user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .profile__icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        background-color: $color_bg_bell;
+        i {
+          color: $color_bell;
+        }
+      }
+      .profile__wrap {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        .profile__wrap-user {
+          margin-left: 8px;
+          .profile__hello {
+            font-size: 12px;
+            line-height: 18px;
+            color: $color_text_sidebar;
+          }
+          .profile__name {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_text_input;
+          }
+        }
+      }
+    }
+
+    .profile__summary-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_orange_bland;
+      margin: 10px 0;
+    }
+
+    .profile__summary-card-list {
+      .profile__summary-card-item {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        width: 102%;
+        height: 83px;
+        background-color: $color_white;
+        box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+        border-radius: 12px;
+        .profile__summary-card-item-chart {
+          width: 30%;
+          margin-left: -10px;
+        }
+        .profile__summary-card-item-wrapNumber {
+          margin-left: -5px;
+
+          div {
+            font-family: Nunito;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: -5px;
+          }
+          .profile__summary-card-item-wrapIcon {
+            margin-top: -10px;
+            i {
+              font-size: 14px;
+              color: $color_orange_bland;
+            }
+            span {
+              font-family: Nunito;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 21px;
+              margin-left: 5px;
+              color: $color_orange_bland;
+            }
+          }
+        }
+        .profile__summary-card-item-wrapStatus {
+          margin-left: 10px;
+          .profile__summary-card-item-up {
+            display: flex;
+            align-items: center;
+            i {
+              font-size: 6px;
+              color: #ffd130;
+            }
+            .text {
+              font-family: Nunito;
+              font-size: 12px;
+              line-height: 21px;
+              color: $color_text_sidebar;
+              margin: 0 5px;
+            }
+            .number {
+              margin-left: 5px;
+              font-family: Nunito;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 18px;
+              color: $color_orange_bland;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dashboard__calender {
+  background-color: $color_white;
+  box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
+  border-radius: 12px;
+}

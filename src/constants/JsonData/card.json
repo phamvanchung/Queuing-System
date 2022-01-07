@@ -1,0 +1,42 @@
+[
+  {
+    "iconHeader": "bx bx-calendar-alt",
+    "title": "Số thứ tự đã cấp",
+    "count": "4.221",
+    "iconUpDown": "bx bx-up-arrow-alt",
+    "numberPercent": "30,05%",
+    "color": "blue",
+    "colorText": "text-orange",
+    "bg": "background-orange "
+  },
+  {
+    "iconHeader": "bx bx-calendar-check",
+    "title": "Số thứ tự đã sử dụng",
+    "count": "3.721",
+    "iconUpDown": "bx bx-down-arrow-alt",
+    "numberPercent": "30,05%",
+    "color": "green",
+    "colorText": "text-red",
+    "bg": "background-red"
+  },
+  {
+    "iconHeader": "bx bxs-user-detail",
+    "title": "Số thứ tự đang chờ",
+    "count": "468",
+    "iconUpDown": "bx bx-up-arrow-alt",
+    "numberPercent": "30,05%",
+    "color": "orange",
+    "colorText": "text-orange",
+    "bg": "background-orange "
+  },
+  {
+    "iconHeader": "bx bxs-bookmark-plus",
+    "title": "Số thứ tự đã bỏ qua",
+    "count": "31",
+    "iconUpDown": "bx bx-down-arrow-alt",
+    "numberPercent": "30,05%",
+    "color": "red",
+    "bg": "background-red",
+    "colorText": "text-red"
+  }
+]

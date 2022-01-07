@@ -1,0 +1,106 @@
+@import "../../assets/styles/global.scss";
+
+.status-card {
+  padding: 10px 15px;
+  background-color: $color_white;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.5s ease 0s;
+  width: 100%;
+  margin-left: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .status-card__wrap-icon {
+    display: flex;
+    align-items: center;
+
+    .status-card__icon {
+      width: 48px;
+      height: 48px;
+      opacity: 0.15;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-right: 10px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+    .blue {
+      background: #6695fb;
+      border: 1px solid #dadada;
+    }
+    .green {
+      background: #35c75a;
+      border: 2px solid #35c75a;
+    }
+    .orange {
+      background: #ffac6a;
+      border: 1px solid #dadada;
+    }
+    .red {
+      background: #f86d6d;
+      border: 1px solid #dadada;
+    }
+
+    span {
+      font-family: Nunito;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $color_text_input;
+      width: 80px;
+    }
+  }
+
+  .status-card__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    .status-card-count {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      color: $color_text_input;
+      line-height: 45px;
+    }
+    .status-card-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      padding: 2px;
+    }
+    .background-orange {
+      background: rgba(255, 149, 1, 0.15);
+    }
+    .background-red {
+      background: rgba(231, 63, 63, 0.15);
+    }
+    i {
+      font-size: 10px;
+      color: #ff9138;
+    }
+    .status-card-number {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 8px;
+      line-height: 12px;
+    }
+    .text-orange {
+      color: #ff9138;
+    }
+    .text-red {
+      color: #e73f3f;
+    }
+  }
+}
