@@ -1,6 +1,6 @@
 
 export const COLORS = {
-  BG_COLOR: '#b1b1b1',
+  BG_COLOR: '#e6e6e6',
   COLOR_TEXT: '#37474F',
   COLOR_TEXT_INPUT: '#535261',
   COLOR_BORDER: ' #D4D4D7',

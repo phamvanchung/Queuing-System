@@ -8,7 +8,7 @@ const LoginPage = lazy(() => import('./pages/Login'))
 const DashboardPage = lazy(() => import('./pages/Dashboard'))
 const ChangePasswordPage = lazy(() => import('./pages/ChangePass'))
 const ForgotPasswordPage = lazy(() => import('./pages/ForgotPass'))
-const EquipmentPage = lazy(() => import('./pages/EquipmentPage'))
+const ListEquipment = lazy(() => import('./pages/EquipmentPage/ListEquipment'))
 const NumberLevelPage = lazy(() => import('./pages/NumberLevelPage'))
 const ProfilePage = lazy(() => import('./pages/ProfilePage'))
 const ServicePage = lazy(() => import('./pages/ServicePage'))
@@ -26,11 +26,11 @@ export const routes: IRoutes[] = [
     component: DashboardPage,
   },
   {
-    path: '/equipment',
+    path: '/list-equipment',
     exact: true,
     layout: AdminLayout,
     guard: AuthGuard,
-    component: EquipmentPage,
+    component: ListEquipment,
   },
   {
     path: '/level-number',
