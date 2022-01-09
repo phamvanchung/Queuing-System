@@ -1,32 +1,47 @@
 [
-    {
-        "display_name": "Dashboard",
-        "route": "/",
-        "icon": "bx bx-category-alt"
-    },
-    {
-        "display_name": "Thiết bị",
-        "route": "/equipment",
-        "icon": "bx bx-desktop"
-    },
-    {
-        "display_name": "Dịch vụ",
-        "route": "/service",
-        "icon": "bx bx-message-rounded-dots"
-    },
-    {
-        "display_name": "Cấp số",
-        "route": "/level-number",
-        "icon": "bx bx-layer"
-    },
-    {
-        "display_name": "Báo cáo",
-        "route": "/report",
-        "icon": "bx bx-clipboard"
-    },
-    {
-        "display_name": "Cài đặt hệ thống",
-        "route": "/setting-system",
-        "icon": "bx bx-cog"
-    }
+  {
+    "display_name": "Dashboard",
+    "route": "/",
+    "icon": "bx bx-category-alt"
+  },
+  {
+    "display_name": "Thiết bị",
+    "route": "/list-equipment",
+    "icon": "bx bx-desktop"
+  },
+  {
+    "display_name": "Dịch vụ",
+    "route": "/service",
+    "icon": "bx bx-message-rounded-dots"
+  },
+  {
+    "display_name": "Cấp số",
+    "route": "/level-number",
+    "icon": "bx bx-layer"
+  },
+  {
+    "display_name": "Báo cáo",
+    "route": "/report",
+    "icon": "bx bx-clipboard"
+  },
+  {
+    "display_name": "Cài đặt hệ thống",
+    "route": "/setting-system",
+    "icon": "bx bx-cog",
+    "icon_system": "bx bx-dots-vertical-rounded",
+    "subNav": [
+      {
+        "title": "Quản lý vai trò",
+        "path": "/setting-system/role"
+      },
+      {
+        "title": "Quản lý tài khoản",
+        "path": "/setting-system/account"
+      },
+      {
+        "title": "Nhật ký người dùng",
+        "path": "/setting-system/diary"
+      }
+    ]
+  }
 ]

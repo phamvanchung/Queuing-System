@@ -19,6 +19,7 @@ const SidebarItem = (props: any) => {
       <div className={`sidebar__item-inner ${active}`}>
         <i className={props.icon}></i>
         <span>{props.title}</span>
+        <i className={props?.iconSystem}></i>
       </div>
     </div>
   );
@@ -58,6 +59,7 @@ const Sidebar = () => {
               <SidebarItem
                 title={item.display_name}
                 icon={item.icon}
+                iconSystem={item?.icon_system}
                 active={item.route === match.url}
               />
             </Link>

@@ -5,3 +5,23 @@
   margin: 0;
   font-family: Nunito, sans-serif;
 }
+
+table {
+  font-family: Nunito, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+td,
+th {
+  border: 1px solid #ffe3cd;
+  text-align: left;
+  padding: 5px 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff2e7;
+}

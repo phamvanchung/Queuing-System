@@ -1,4 +1,4 @@
-$bg_color: #b1b1b1;
+$bg_color: #e6e6e6;
 $color_text: #37474f;
 $color_text_input: #535261;
 $color_border: #d4d4d7;
@@ -12,6 +12,8 @@ $color_text_sidebar: #7e7d88;
 $color_bg_bell: #fff2e7;
 $color_bell: #ffac6a;
 $color_text_avatar: #282739;
+$color-circle-red: #ec3740;
+$color-circle-green: #35c75a;
 
 @mixin mobile-small {
   @media (min-width: 0) and (max-width: 424px) {
