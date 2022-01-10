@@ -1,5 +1,6 @@
 export const equipments = [
   {
+    eqId: 1,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -8,6 +9,7 @@ export const equipments = [
     statusConnect: 'Mất kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 2,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -16,6 +18,7 @@ export const equipments = [
     statusConnect: 'Mất kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 3,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -24,6 +27,7 @@ export const equipments = [
     statusConnect: 'Kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 4,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -32,6 +36,7 @@ export const equipments = [
     statusConnect: 'Mất kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 5,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -40,6 +45,7 @@ export const equipments = [
     statusConnect: 'Kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 6,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -48,6 +54,7 @@ export const equipments = [
     statusConnect: 'Mất kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 7,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -57,6 +64,7 @@ export const equipments = [
     service: 'Khám tim mạch, Khám mắt...',
   }
   , {
+    eqId: 8,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',
@@ -65,6 +73,7 @@ export const equipments = [
     statusConnect: 'Mất kết nối',
     service: 'Khám tim mạch, Khám mắt...',
   }, {
+    eqId: 9,
     id: 'KIO_01',
     name: 'Kiosk',
     ip: '	192.168.1.10',

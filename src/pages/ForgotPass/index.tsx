@@ -95,6 +95,7 @@ const ForgotPass = (props: Props) => {
                   borderStyle: "solid",
                   borderWidth: "1px",
                   borderColor: COLORS.COLOR_BTN,
+                  backgroundColor: "#FFF2E7",
                 }}
               >
                 Hủy

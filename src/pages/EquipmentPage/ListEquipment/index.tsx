@@ -11,31 +11,21 @@ import Pagination from "@mui/material/Pagination";
 import PaginationItem from "@mui/material/PaginationItem";
 import Paper from "@mui/material/Paper";
 import Select from "@mui/material/Select";
-import { makeStyles } from "@mui/styles";
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import CreateBtn from "../../../components/CreateBtn";
+import Placeholder from "../../../components/Placeholder";
 import User from "../../../components/User";
 import { equipments } from "../../../constants/dataTable";
 import "./styles.scss";
-
-const useStyles = makeStyles(() => ({
-  ul: {
-    "& .MuiPaginationItem-root": {
-      fontSize: 16,
-      fontWeight: 600,
-      color: "#7e7d88",
-      fontFamily: "Nunito",
-      border: "none",
-    },
-    "& .Mui-selected": {
-      backgroundColor: "#ff7506",
-      color: "#fff",
-    },
-  },
-}));
+import { useStyles } from "../../../assets/styles";
 
 const ListEquipment = () => {
   const classes = useStyles();
+
+  const [statusAction, setStatusAction] = React.useState("");
+  const [statusConnect, setStatusConnect] = React.useState("");
+
   const breadcrumbs = [
     <Link underline="hover" key="1" color="inherit" href="/">
       Thiết bị
@@ -67,10 +57,14 @@ const ListEquipment = () => {
               <a href="###">Xem thêm</a>
             </td>
             <td>
-              <a href="###">Chi tiết</a>
+              <RouterLink to={`/list-equipment/detail/${equipment.eqId}`}>
+                Chi tiết
+              </RouterLink>
             </td>
             <td>
-              <a href="###">Cập nhật</a>
+              <RouterLink to={`/list-equipment/edit/${equipment.eqId}`}>
+                Cập nhật
+              </RouterLink>
             </td>
           </tr>
         );
@@ -98,14 +92,21 @@ const ListEquipment = () => {
             <div className="list__equipment_content-select">
               <span>Trang thái hoạt động</span>
               <Select
-                // value={age}
-                // onChange={handleChange}
                 displayEmpty
+                value={statusAction}
+                onChange={(event) => setStatusAction(event.target.value)}
                 className="list__equipment_content-select-item"
+                renderValue={
+                  statusAction !== ""
+                    ? undefined
+                    : () => <Placeholder>Tất cả</Placeholder>
+                }
+                inputProps={{
+                  classes: {
+                    icon: classes.icon,
+                  },
+                }}
               >
-                <MenuItem value="">
-                  <em>Tất cả</em>
-                </MenuItem>
                 <MenuItem value={10}>Hoạt động</MenuItem>
                 <MenuItem value={20}>Ngừng hoạt động</MenuItem>
               </Select>
@@ -113,15 +114,21 @@ const ListEquipment = () => {
             <div className="list__equipment_content-select">
               <span>Trang thái kết nối</span>
               <Select
-                // value={age}
-                // onChange={handleChange}
                 displayEmpty
-                inputProps={{ "aria-label": "Without label" }}
+                value={statusConnect}
+                onChange={(event) => setStatusConnect(event.target.value)}
                 className="list__equipment_content-select-item"
+                renderValue={
+                  statusConnect !== ""
+                    ? undefined
+                    : () => <Placeholder>Tất cả</Placeholder>
+                }
+                inputProps={{
+                  classes: {
+                    icon: classes.icon,
+                  },
+                }}
               >
-                <MenuItem value="">
-                  <em>Tất cả</em>
-                </MenuItem>
                 <MenuItem value={10}>Kết nối</MenuItem>
                 <MenuItem value={20}>Mất kết nối</MenuItem>
               </Select>
@@ -141,7 +148,7 @@ const ListEquipment = () => {
             >
               <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Nhập từ khóa" />
               <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
-                <SearchIcon />
+                <SearchIcon className={classes.searchIcon} />
               </IconButton>
             </Paper>
           </div>
@@ -175,9 +182,13 @@ const ListEquipment = () => {
           className="list__equipment_content-pagination"
           classes={{ ul: classes.ul }}
         />
-        <a href="###" className="wrap-btn">
+        <Link
+          component={RouterLink}
+          to="/list-equipment/add"
+          className="wrap-btn"
+        >
           <CreateBtn icon="bx bxs-plus-square" title="Thêm thiết bị" />
-        </a>
+        </Link>
       </div>
     </div>
   );

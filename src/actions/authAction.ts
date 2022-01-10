@@ -9,6 +9,7 @@ export const login = (email: string, password: string) => (dispatch: Dispatch<an
   myFirebase.auth().signInWithEmailAndPassword(email, password)
     .then(resp => {
       localStorage.setItem(QUEUING, JSON.stringify(resp.user));
+      localStorage.setItem("refresh-token", JSON.stringify(resp.user?.refreshToken));
       dispatch({
         type: LOGIN_SUCCESS,
         payload: resp
