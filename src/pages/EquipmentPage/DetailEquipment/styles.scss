@@ -1,0 +1,90 @@
+@import "../../../assets/styles/global.scss";
+
+.detail__equipment-container {
+  padding: 10px 20px;
+
+  .detail__equipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail__equipment-content {
+    padding: 0 70px 10px 0;
+    position: relative;
+
+    h3 {
+      font-family: Nunito;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_orange_bland;
+      margin-bottom: 15px;
+    }
+    .detail__equipment_content-wrap {
+      width: 100%;
+      background-color: $color_white;
+      border-radius: 8px;
+      height: 500px;
+      .detail__equipment_content-title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color_orange_bland;
+        padding: 20px 0 0 20px;
+      }
+      .detail__equipment_content-leftAndRight {
+        width: 100%;
+        padding: 20px 20px 10px;
+        display: flex;
+        align-items: center;
+
+        .detail__equipment_content-left {
+          width: 50%;
+        }
+        .detail__equipment_content-right {
+          width: 50%;
+        }
+        .detail__equipment_content-wrapLabelAndValue {
+          margin: 10px 0;
+          .detail__equipment_content-label {
+            font-family: Nunito;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_text_avatar;
+            width: 30%;
+            display: inline-block;
+          }
+          .detail__equipment_content-value {
+            font-size: 16px;
+            line-height: 24px;
+            color: $color_text_input;
+          }
+        }
+      }
+    }
+    .wrap-service {
+      padding: 0 20px;
+      .detail__equipment_content-useService {
+        font-family: Nunito;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color_text_avatar;
+      }
+      .detail__equipment_content-useService-content {
+        font-family: Nunito;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color_text_input;
+      }
+    }
+  }
+}
+.wrap-btn {
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  text-decoration: none;
+}

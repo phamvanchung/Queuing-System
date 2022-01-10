@@ -8,6 +8,7 @@ interface InputProps {
   title?: string;
   name?: string;
   value?: string;
+  type?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -16,6 +17,7 @@ const TextField = ({
   title,
   name,
   value,
+  type = "string",
   onChange,
   ...props
 }: InputProps) => {
@@ -49,6 +51,7 @@ const TextField = ({
         name={name}
         placeholder={placeholder}
         value={value}
+        type={type}
         onChange={onChange}
         {...props}
       />
