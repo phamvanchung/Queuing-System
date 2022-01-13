@@ -2,6 +2,7 @@ import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import SearchIcon from "@mui/icons-material/Search";
+import { FormControl } from "@mui/material";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
@@ -13,12 +14,12 @@ import Paper from "@mui/material/Paper";
 import Select from "@mui/material/Select";
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { useStyles } from "../../../assets/styles";
 import CreateBtn from "../../../components/CreateBtn";
 import Placeholder from "../../../components/Placeholder";
 import User from "../../../components/User";
 import { equipments } from "../../../constants/dataTable";
 import "./styles.scss";
-import { useStyles } from "../../../assets/styles";
 
 const ListEquipment = () => {
   const classes = useStyles();
@@ -84,54 +85,58 @@ const ListEquipment = () => {
         </Breadcrumbs>
         <User />
       </div>
-      {/* begin select*/}
+      {/* begin content*/}
       <div className="list__equipment_content">
         <h3>Danh sách thiết bị</h3>
         <div className="list__equipment_content-wrap">
           <div className="list__equipment_content-wrap-select">
             <div className="list__equipment_content-select">
-              <span>Trang thái hoạt động</span>
-              <Select
-                displayEmpty
-                value={statusAction}
-                onChange={(event) => setStatusAction(event.target.value)}
-                className="list__equipment_content-select-item"
-                renderValue={
-                  statusAction !== ""
-                    ? undefined
-                    : () => <Placeholder>Tất cả</Placeholder>
-                }
-                inputProps={{
-                  classes: {
-                    icon: classes.icon,
-                  },
-                }}
-              >
-                <MenuItem value={10}>Hoạt động</MenuItem>
-                <MenuItem value={20}>Ngừng hoạt động</MenuItem>
-              </Select>
+              <FormControl size="small" sx={{ width: "100%" }}>
+                <span>Trang thái hoạt động</span>
+                <Select
+                  displayEmpty
+                  value={statusAction}
+                  onChange={(event) => setStatusAction(event.target.value)}
+                  className="list__equipment_content-select-item"
+                  renderValue={
+                    statusAction !== ""
+                      ? undefined
+                      : () => <Placeholder>Tất cả</Placeholder>
+                  }
+                  inputProps={{
+                    classes: {
+                      icon: classes.icon,
+                    },
+                  }}
+                >
+                  <MenuItem value={10}>Hoạt động</MenuItem>
+                  <MenuItem value={20}>Ngừng hoạt động</MenuItem>
+                </Select>
+              </FormControl>
             </div>
             <div className="list__equipment_content-select">
-              <span>Trang thái kết nối</span>
-              <Select
-                displayEmpty
-                value={statusConnect}
-                onChange={(event) => setStatusConnect(event.target.value)}
-                className="list__equipment_content-select-item"
-                renderValue={
-                  statusConnect !== ""
-                    ? undefined
-                    : () => <Placeholder>Tất cả</Placeholder>
-                }
-                inputProps={{
-                  classes: {
-                    icon: classes.icon,
-                  },
-                }}
-              >
-                <MenuItem value={10}>Kết nối</MenuItem>
-                <MenuItem value={20}>Mất kết nối</MenuItem>
-              </Select>
+              <FormControl size="small" sx={{ width: "100%" }}>
+                <span>Trang thái kết nối</span>
+                <Select
+                  displayEmpty
+                  value={statusConnect}
+                  onChange={(event) => setStatusConnect(event.target.value)}
+                  className="list__equipment_content-select-item"
+                  renderValue={
+                    statusConnect !== ""
+                      ? undefined
+                      : () => <Placeholder>Tất cả</Placeholder>
+                  }
+                  inputProps={{
+                    classes: {
+                      icon: classes.icon,
+                    },
+                  }}
+                >
+                  <MenuItem value={10}>Kết nối</MenuItem>
+                  <MenuItem value={20}>Mất kết nối</MenuItem>
+                </Select>
+              </FormControl>
             </div>
           </div>
           <div className="list__equipment_content-search">

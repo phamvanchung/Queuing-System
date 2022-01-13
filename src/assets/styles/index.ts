@@ -28,9 +28,22 @@ export const useStyles = makeStyles(() => ({
   },
   icon: {
     fill: "#ff7506",
-    marginTop: 2,
   },
   searchIcon: {
     fill: "#ff7506",
   },
+  span: {
+    '& .MuiTypography-root': {
+      fontFamily: 'Nunito',
+      fontWeight: 600,
+      fontSize: '16px',
+      color: '#282739',
+    }
+  },
+  select: {
+    '& .MuiSelect-select': {
+      backgroundColor: '#fff',
+    }
+  },
+
 }));

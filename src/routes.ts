@@ -8,12 +8,20 @@ const LoginPage = lazy(() => import('./pages/Login'))
 const DashboardPage = lazy(() => import('./pages/Dashboard'))
 const ChangePasswordPage = lazy(() => import('./pages/ChangePass'))
 const ForgotPasswordPage = lazy(() => import('./pages/ForgotPass'))
+// equipment
 const ListEquipment = lazy(() => import('./pages/EquipmentPage/ListEquipment'))
-const FormEquipment = lazy(() => import('./pages/EquipmentPage/FormEquipment'))
+const FormEquipment = lazy(() => import('./pages/EquipmentPage/FormEquipmentAction'))
 const DetailEquipment = lazy(() => import('./pages/EquipmentPage/DetailEquipment'))
+// service
+const ListServicePage = lazy(() => import('./pages/ServicePage/ListService'))
+const FormServicePage = lazy(() => import('./pages/ServicePage/FormServiceAction'))
+const DetailServicePage = lazy(() => import('./pages/ServicePage/DetailService'))
+
+//numberLevel
 const NumberLevelPage = lazy(() => import('./pages/NumberLevelPage'))
+//profile
 const ProfilePage = lazy(() => import('./pages/ProfilePage'))
-const ServicePage = lazy(() => import('./pages/ServicePage'))
+//report
 const ReportPage = lazy(() => import('./pages/ReportPage'))
 const SettingSystemPage = lazy(() => import('./pages/SettingSystem'))
 const NotFound = lazy(() => import('./components/NotFound'))
@@ -56,6 +64,34 @@ export const routes: IRoutes[] = [
     component: DetailEquipment,
   },
   {
+    path: '/service',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: ListServicePage,
+  },
+  {
+    path: '/service/add',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormServicePage,
+  },
+  {
+    path: '/service/edit/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormServicePage,
+  },
+  {
+    path: '/service/detail/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: DetailServicePage,
+  },
+  {
     path: '/level-number',
     exact: true,
     layout: AdminLayout,
@@ -69,13 +105,7 @@ export const routes: IRoutes[] = [
     guard: AuthGuard,
     component: ProfilePage,
   },
-  {
-    path: '/service',
-    exact: true,
-    layout: AdminLayout,
-    guard: AuthGuard,
-    component: ServicePage,
-  },
+
   {
     path: '/report',
     exact: true,

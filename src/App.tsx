@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "react-nice-dates/build/style.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import "./assets/boxicons-2.0.7/css/boxicons.min.css";
 import { IRoutes } from "./models";
 import { routes } from "./routes";

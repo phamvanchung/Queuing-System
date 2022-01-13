@@ -3,12 +3,10 @@
 .wrapper__container {
   display: flex;
   .wrapper__sidebar {
-    width: 15%;
+    width: 245px;
   }
   .wrapper__children {
-    width: 85%;
+    width: 100%;
     background-color: $bg_color;
-    // height: 100vh;
-    // padding: 15px 20px;
   }
 }

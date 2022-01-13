@@ -83,3 +83,130 @@ export const equipments = [
     service: 'Khám tim mạch, Khám mắt...',
   }
 ]
+
+export const services = [
+  {
+    serviceId: 1,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'true',
+    statusAction: 'Hoạt động',
+    desc: "Mô tả dịch vụ 1"
+  },
+  {
+    serviceId: 2,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'false',
+    statusAction: 'Ngưng Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 3,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'false',
+    statusAction: 'Ngưng Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 4,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'true',
+    statusAction: 'Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 5,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'false',
+    statusAction: 'Ngưng Hoạt động',
+    desc: "Hoạt động"
+  },
+
+  {
+    serviceId: 6,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'true',
+    statusAction: 'Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 7,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'true',
+    statusAction: 'Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 8,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'false',
+    statusAction: 'Ngưng Hoạt động',
+    desc: "Hoạt động"
+  },
+  {
+    serviceId: 9,
+    id: 'KIO_01',
+    name: 'Kiosk',
+    status: 'true',
+    statusAction: 'Hoạt động',
+    desc: "Hoạt động"
+  },
+]
+
+export const detailServices = [
+  {
+    serviceId: 1,
+    stt: '2010001',
+    status: 'green',
+    statusName: 'Đã hoàn thành'
+  },
+  {
+    serviceId: 2,
+    stt: '2010001',
+    status: 'blue',
+    statusName: 'Đang thực hiện'
+  },
+  {
+    serviceId: 3,
+    stt: '2010001',
+    status: 'gray',
+    statusName: 'Vắng'
+  },
+  {
+    serviceId: 4,
+    stt: '2010001',
+    status: 'green',
+    statusName: 'Đã hoàn thành'
+  }, {
+    serviceId: 5,
+    stt: '2010001',
+    status: 'blue',
+    statusName: 'Đang thực hiện'
+  }
+  , {
+    serviceId: 6,
+    stt: '2010001',
+    status: 'gray',
+    statusName: 'Vắng'
+  },
+  {
+    serviceId: 7,
+    stt: '2010001',
+    status: 'green',
+    statusName: 'Đã hoàn thành'
+  }, {
+    serviceId: 8,
+    stt: '2010001',
+    status: 'green',
+    statusName: 'Đã hoàn thành'
+  }
+
+
+]

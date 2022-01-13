@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 const usePlaceholderStyles = makeStyles(() => ({
   placeholder: {
-    marginTop: " 10px",
+    // marginTop: " 10px",
     color: "#535261",
   },
 }));

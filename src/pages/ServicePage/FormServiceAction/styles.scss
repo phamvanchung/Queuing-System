@@ -1,0 +1,57 @@
+@import "../../../assets/styles/global.scss";
+
+.form__action__service-container {
+  padding: 10px 20px;
+
+  .form__action__service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form__action__service-content {
+    h3 {
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: $color_orange_bland;
+    }
+
+    .form__action__service-wrap {
+      width: 100%;
+      background-color: $color_white;
+      border-radius: 8px;
+      margin-top: 10px;
+      .form__action__service-title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color_orange_bland;
+        padding: 10px 0 0 20px;
+      }
+      .form__action__service-wrap-checked {
+        display: flex;
+        align-items: center;
+        .to {
+          margin: 0 5px;
+          font-family: Nunito;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          color: #282739;
+        }
+      }
+    }
+  }
+  .form__action__service-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.form__action__service-helper {
+  padding: 0 20px 20px;
+}

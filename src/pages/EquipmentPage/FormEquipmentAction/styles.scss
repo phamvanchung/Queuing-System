@@ -43,14 +43,9 @@
         }
         .add__equipment_content-wrap-right {
           width: 50%;
-          label {
-            font-family: Nunito;
-            font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 5px;
-          }
+
           .add__equipment_content-select-item {
-            height: 44px;
+            // height: 40px;
             border-radius: 8px;
           }
         }
@@ -59,6 +54,9 @@
         margin: 0 20px;
       }
       .add__equipment_content-helper {
+        span {
+          color: red;
+        }
         font-family: Nunito;
         font-size: 14px;
         color: $color_text_sidebar;

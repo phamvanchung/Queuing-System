@@ -27,7 +27,7 @@ export const StyledInputElement = styled("input")(
   font-weight: 400;
   line-height: 1.5;
   color: ${theme.palette.mode === "dark" ? grey[300] : grey[900]};
-  // background: ${theme.palette.mode === "dark" ? grey[900] : grey[50]};
+  background: ${theme.palette.mode === "dark" ? grey[900] : grey[50]};
   border: 1px solid ${theme.palette.mode === "dark" ? grey[800] : grey[300]};
   border-radius: 8px;
   padding: 12px 16px;
@@ -38,7 +38,7 @@ export const StyledInputElement = styled("input")(
   margin-bottom:20px;
   
   &:hover {
-    // background: ${theme.palette.mode === "dark" ? null : grey[100]};
+    background: ${theme.palette.mode === "dark" ? null : grey[100]};
     border-color: ${theme.palette.mode === "dark" ? grey[600] : grey[400]};
   }
 
