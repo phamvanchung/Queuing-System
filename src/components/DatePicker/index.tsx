@@ -37,8 +37,8 @@ export default function CalendarsDateRangePicker() {
               }}
               className={classes.root}
             />
-            <Box>
-              <ArrowRightIcon />
+            <Box className={classes.icon}>
+              <ArrowRightIcon className={classes.root} />
             </Box>
             <TextField
               {...endProps}
@@ -64,9 +64,18 @@ const useStyles = makeStyles({
     "& .MuiOutlinedInput-root": {
       borderRadius: "8px",
       backgroundColor: "#fff",
+      color: "#282739",
+      fontSize: "14px",
+      fontFamily: "Nunito",
+    },
+    "& .MuiOutlinedInput-input": {
+      padding: "9.5px 14px"
     },
     "& .MuiSvgIcon-root": {
       color: "#ff7506",
     },
+  },
+  icon: {
+    color: "#535261",
   },
 });

@@ -1,0 +1,37 @@
+@import "../../../assets/styles/global.scss";
+
+.number__level__container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  .number__level__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .number__level__form-content {
+    padding: 0 20px 10px 0;
+    .number__level__form-wrap {
+      background-color: $color_white;
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 8px;
+      margin-top: 10px;
+      .number__level__wrap-title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 48px;
+        color: #ff7506;
+        margin: 10px 0 20px;
+      }
+      .number__level__wrap-btn {
+        margin-top: 50px;
+      }
+    }
+  }
+}
