@@ -207,6 +207,99 @@ export const detailServices = [
     status: 'green',
     statusName: 'Đã hoàn thành'
   }
+]
 
-
+export const numberLevels = [
+  {
+    id: 1,
+    stt: '2010001',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tim mạch',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 2,
+    stt: '2010002',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tim mạch',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 3,
+    stt: '2010003',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tai mũi họng',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 4,
+    stt: '2010004',
+    username: 'Trần Thị Ái Vân',
+    nameService: '	Khám tim mạch',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 5,
+    stt: '2010005',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tim mạch',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 6,
+    stt: '2010006',
+    username: 'Trần Thị Ái Vân',
+    nameService: '	Khám tai mũi họng',
+    status: 'red',
+    statusContent: 'Bỏ qua',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 7,
+    stt: '2010007',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tai mũi họng',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Hệ thống'
+  }
+  , {
+    id: 8,
+    stt: '2010008',
+    username: 'Trần Thị Ái Vân',
+    nameService: '	Khám tổng quát',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 9,
+    stt: '2010009',
+    username: 'Lê Huỳnh Ái Vân',
+    nameService: '	Khám tổng quát',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    endTime: '14:35 - 12/11/2021',
+    powerSupply: 'Hệ thống'
+  }
 ]

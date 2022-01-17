@@ -18,7 +18,10 @@ const FormServicePage = lazy(() => import('./pages/ServicePage/FormServiceAction
 const DetailServicePage = lazy(() => import('./pages/ServicePage/DetailService'))
 
 //numberLevel
-const NumberLevelPage = lazy(() => import('./pages/NumberLevelPage'))
+const ListNumberLevel = lazy(() => import('./pages/NumberLevelPage/ListNumberLevel'))
+const FormNumberLevel = lazy(() => import('./pages/NumberLevelPage/FormNumberLevel'))
+const DetailNumberLevel = lazy(() => import('./pages/NumberLevelPage/DetailNumberLevel'))
+
 //profile
 const ProfilePage = lazy(() => import('./pages/ProfilePage'))
 //report
@@ -96,7 +99,28 @@ export const routes: IRoutes[] = [
     exact: true,
     layout: AdminLayout,
     guard: AuthGuard,
-    component: NumberLevelPage,
+    component: ListNumberLevel,
+  },
+  {
+    path: '/level-number/add',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormNumberLevel,
+  },
+  {
+    path: '/level-number/edit/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormNumberLevel,
+  },
+  {
+    path: '/level-number/detail/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: DetailNumberLevel,
   },
   {
     path: '/profile',
