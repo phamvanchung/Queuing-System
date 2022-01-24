@@ -1,0 +1,50 @@
+@import "../../assets/styles/global.scss";
+
+.report__container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  .report__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .report__content {
+    padding: 0 70px 10px 0;
+    position: relative;
+    .report__time {
+      margin-top: 20px;
+      width: 30%;
+    }
+    .report__content-table-wrap {
+      margin-top: 10px;
+      .blue {
+        color: #4277ff;
+      }
+      .gray {
+        color: #7e7d88;
+      }
+      .red {
+        color: #e73f3f;
+      }
+      i {
+        font-size: 8px;
+        margin-right: 5px;
+      }
+      .report__content-table-th {
+        max-width: 25%;
+      }
+    }
+    .report__content-pagination {
+      float: right;
+      margin-top: 20px;
+    }
+    .wrap-btn {
+      position: absolute;
+      top: 80px;
+      right: -20px;
+      text-decoration: none;
+    }
+  }
+}

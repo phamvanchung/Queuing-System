@@ -303,3 +303,81 @@ export const numberLevels = [
     powerSupply: 'Hệ thống'
   }
 ]
+
+export const reports = [
+  {
+    id: 1,
+    stt: '2010001',
+    nameService: '	Khám tim mạch',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 2,
+    stt: '2010002',
+    nameService: '	Khám tim mạch',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 3,
+    stt: '2010003',
+    nameService: '	Khám tai mũi họng',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 4,
+    stt: '2010004',
+    nameService: '	Khám tim mạch',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 5,
+    stt: '2010005',
+    nameService: '	Khám tim mạch',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Hệ thống'
+  }, {
+    id: 6,
+    stt: '2010006',
+    nameService: '	Khám tai mũi họng',
+    status: 'red',
+    statusContent: 'Bỏ qua',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Kiosk'
+  }, {
+    id: 7,
+    stt: '2010007',
+    nameService: '	Khám tai mũi họng',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Hệ thống'
+  }
+  , {
+    id: 8,
+    stt: '2010008',
+    nameService: '	Khám tổng quát',
+    status: 'blue',
+    statusContent: 'Đang chờ',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Kiosk'
+  },
+  {
+    id: 9,
+    stt: '2010009',
+    nameService: '	Khám tổng quát',
+    status: 'gray',
+    statusContent: 'Đã sử dụng',
+    startTime: '14:35 - 07/11/2021',
+    powerSupply: 'Hệ thống'
+  },
+]
