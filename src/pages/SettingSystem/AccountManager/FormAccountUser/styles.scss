@@ -1,0 +1,62 @@
+@import "../../../../assets/styles/global.scss";
+
+.add__account_container {
+  padding: 10px 20px;
+
+  .add__account_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .add__account_content {
+    padding: 0 50px 10px 0;
+
+    .add__account_content-wrap {
+      width: 100%;
+      background-color: $color_white;
+      border-radius: 8px;
+      .add__account_content-title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color_orange_bland;
+        padding: 20px 0 0 20px;
+      }
+
+      .add__account_content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 20px 0;
+        .add__account_content-wrap-left {
+          width: 50%;
+          margin-right: 30px;
+        }
+        .add__account_content-select-item {
+          border-radius: 8px;
+        }
+        .add__account_content-wrap-right {
+          width: 50%;
+        }
+      }
+      .add__account_content-input {
+        margin: 0 20px;
+      }
+      .add__account_content-helper {
+        span {
+          color: red;
+        }
+        font-family: Nunito;
+        font-size: 14px;
+        color: $color_text_sidebar;
+        padding: 0 20px 50px;
+      }
+    }
+  }
+  .add__account_content-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

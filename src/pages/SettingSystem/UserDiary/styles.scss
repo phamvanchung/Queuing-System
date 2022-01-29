@@ -1,0 +1,36 @@
+@import "../../../assets/styles/global.scss";
+
+.diary__container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  .diary__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .diary__content {
+    padding: 0 50px 10px 0;
+    .diary__content-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .diary__content-time {
+        width: 35%;
+      }
+    }
+    .diary__content-table-wrap {
+      margin-top: 20px;
+      .diary__content-table-th {
+        max-width: 25%;
+      }
+    }
+    .diary__content-pagination {
+      float: right;
+      margin-top: 10px;
+    }
+  }
+}

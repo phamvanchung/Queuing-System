@@ -1,0 +1,60 @@
+@import "../../../../assets/styles/global.scss";
+
+.account__container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  .account__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .account__content {
+    padding: 0 70px 10px 0;
+    position: relative;
+
+    .account__content-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .account__content-select-wrap {
+        margin-top: 10px;
+        width: 25%;
+      }
+      .account__content-search {
+        margin-top: 4px;
+      }
+    }
+    .account__content-table-wrap {
+      margin: 10px 0 20px;
+      .account__content-table {
+        .status {
+          i {
+            font-size: 8px;
+            margin-right: 5px;
+          }
+        }
+        .red {
+          i {
+            color: $color-circle-red;
+          }
+        }
+        .green {
+          i {
+            color: $color-circle-green;
+          }
+        }
+      }
+    }
+    .account__content-pagination {
+      float: right;
+    }
+    .wrap-btn {
+      position: absolute;
+      right: -20px;
+      top: 125px;
+      text-decoration: none;
+    }
+  }
+}

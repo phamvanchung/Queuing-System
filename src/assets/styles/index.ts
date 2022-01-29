@@ -43,7 +43,7 @@ export const useStyles = makeStyles(() => ({
   select: {
     '& .MuiSelect-select': {
       backgroundColor: '#fff',
-    }
+    },
   },
 
 }));

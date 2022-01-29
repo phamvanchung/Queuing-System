@@ -30,7 +30,9 @@ const ReportPage = lazy(() => import('./pages/ReportPage'))
 //Setting
 const RoleManager = lazy(() => import('./pages/SettingSystem/RoleManager/ListRole'))
 const FormRole = lazy(() => import('./pages/SettingSystem/RoleManager/FormRole'))
-
+const ListAccountUser = lazy(() => import('./pages/SettingSystem/AccountManager/ListAccountUser'))
+const FromAccountUser = lazy(() => import('./pages/SettingSystem/AccountManager/FormAccountUser'))
+const UserDiary = lazy(() => import('./pages/SettingSystem/UserDiary'))
 
 const NotFound = lazy(() => import('./components/NotFound'))
 
@@ -162,6 +164,34 @@ export const routes: IRoutes[] = [
     layout: AdminLayout,
     guard: AuthGuard,
     component: FormRole,
+  },
+  {
+    path: '/setting-system/account',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: ListAccountUser,
+  },
+  {
+    path: '/setting-system/account/add',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FromAccountUser,
+  },
+  {
+    path: '/setting-system/account/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FromAccountUser,
+  },
+  {
+    path: '/setting-system/diary',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: UserDiary,
   },
   {
     path: '/change-password',

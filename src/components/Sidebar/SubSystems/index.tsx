@@ -9,11 +9,11 @@ const SubSystems = () => {
     },
     {
       title: "Quản lý tài khoản",
-      route: "/systems/account/list",
+      route: "/setting-system/account",
     },
     {
       title: "Nhật ký người dùng",
-      route: "/systems/diary/list",
+      route: "/setting-system/diary",
     },
   ];
   return (
