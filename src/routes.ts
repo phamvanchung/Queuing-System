@@ -26,7 +26,12 @@ const DetailNumberLevel = lazy(() => import('./pages/NumberLevelPage/DetailNumbe
 const ProfilePage = lazy(() => import('./pages/ProfilePage'))
 //report
 const ReportPage = lazy(() => import('./pages/ReportPage'))
-const SettingSystemPage = lazy(() => import('./pages/SettingSystem'))
+
+//Setting
+const RoleManager = lazy(() => import('./pages/SettingSystem/RoleManager/ListRole'))
+const FormRole = lazy(() => import('./pages/SettingSystem/RoleManager/FormRole'))
+
+
 const NotFound = lazy(() => import('./components/NotFound'))
 
 
@@ -138,11 +143,25 @@ export const routes: IRoutes[] = [
     component: ReportPage,
   },
   {
-    path: '/setting-system',
+    path: '/setting-system/role',
     exact: true,
     layout: AdminLayout,
     guard: AuthGuard,
-    component: SettingSystemPage,
+    component: RoleManager,
+  },
+  {
+    path: '/setting-system/role/add',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormRole,
+  },
+  {
+    path: '/setting-system/role/:id',
+    exact: true,
+    layout: AdminLayout,
+    guard: AuthGuard,
+    component: FormRole,
   },
   {
     path: '/change-password',
