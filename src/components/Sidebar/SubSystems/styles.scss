@@ -1,0 +1,37 @@
+@import "../../../assets//styles//global.scss";
+
+.navbar {
+  width: 11rem;
+  height: 5rem;
+  .items {
+    list-style: none;
+    background: $color_white;
+    width: 100%;
+
+    &:nth-child(1) {
+      border-top-right-radius: 20px;
+    }
+    &:nth-child(3) {
+      border-bottom-right-radius: 20px;
+    }
+    &:hover {
+      background: $color_orange_bland;
+      overflow: hidden;
+    }
+    .link {
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      font-size: 16px;
+      font-family: Nunito;
+      font-weight: 600;
+      color: $color_text_sidebar;
+
+      &:hover {
+        color: $color_white;
+      }
+    }
+  }
+}

@@ -26,22 +26,8 @@
   },
   {
     "display_name": "Cài đặt hệ thống",
-    "route": "/setting-system",
+    "route": "/setting-system/role",
     "icon": "bx bx-cog",
-    "icon_system": "bx bx-dots-vertical-rounded",
-    "subNav": [
-      {
-        "title": "Quản lý vai trò",
-        "path": "/setting-system/role"
-      },
-      {
-        "title": "Quản lý tài khoản",
-        "path": "/setting-system/account"
-      },
-      {
-        "title": "Nhật ký người dùng",
-        "path": "/setting-system/diary"
-      }
-    ]
+    "icon_system": "bx bx-dots-vertical-rounded"
   }
 ]

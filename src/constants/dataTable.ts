@@ -381,3 +381,48 @@ export const reports = [
     powerSupply: 'Hệ thống'
   },
 ]
+
+export const ListRoles = [
+  {
+    id: 1,
+    nameRole: 'Kế toán',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 1,
+    nameRole: 'Kế toán',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 2,
+    nameRole: 'Bác sĩ',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 3,
+    nameRole: 'Lễ tân',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 4,
+    nameRole: 'Quản lý',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 5,
+    nameRole: 'Admin',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+  {
+    id: 6,
+    nameRole: 'Superadmin',
+    number: '6',
+    desc: 'Thực hiện nhiệm vụ về thống kê số liệu và tổng hợp số liệu',
+  },
+]

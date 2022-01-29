@@ -1,0 +1,101 @@
+@import "../../../assets/styles/global.scss";
+
+.role__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.role__container {
+  padding: 10px 20px;
+  height: 100vh;
+
+  .role__content {
+    padding: 0 70px 10px 0;
+    position: relative;
+
+    .role__content-titleAndSearch {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .role__content-table-wrap {
+      margin: 30px 0 20px;
+      .role__content-table {
+        th {
+          font-family: Nunito;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 24px;
+          color: $color_white;
+          background-color: $color_btn_hover;
+        }
+        td {
+          font-family: Nunito;
+          font-size: 14px;
+          line-height: 21px;
+          color: $color_text_input;
+          height: 36px;
+        }
+      }
+    }
+    .wrap-btn {
+      position: absolute;
+      right: -20px;
+      top: 100px;
+      text-decoration: none;
+    }
+  }
+}
+
+.form__role__container {
+  padding: 10px 20px;
+  .form__role__content {
+    .form__action__role-wrap {
+      width: 100%;
+      background-color: $color_white;
+      border-radius: 8px;
+      margin-top: 10px;
+      height: auto;
+      .form__action__role-title {
+        font-family: Nunito;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color_orange_bland;
+        padding: 10px 0 0 20px;
+      }
+      .form__action__role-required {
+        font-family: Nunito;
+        font-size: 14px;
+        color: #7e7d88;
+        margin-top: 10px;
+        span {
+          color: red;
+        }
+      }
+      .form__action__role-wrapRight {
+        width: 100%;
+        height: 400px;
+        background: #fff2e7;
+        border-radius: 8px;
+        margin-top: -20px;
+        margin-bottom: 10px;
+        .form__action__role-wrapCheckbox {
+          h3 {
+            margin-top: 10px;
+          }
+          margin: 20px;
+        }
+      }
+    }
+  }
+  .form__action__role-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
